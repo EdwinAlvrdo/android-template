@@ -1,13 +1,11 @@
-package com.berlinendeavours.iter.util;
+package com.smtrsolutions.test.util;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
 import android.os.StrictMode;
@@ -19,15 +17,8 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import com.berlinendeavours.iter.R;
-import com.berlinendeavours.iter.activities.baseActivities.BaseActivity;
-
-import java.io.File;
-
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
-import retrofit2.Callback;
+import com.smtrsolutions.test.R;
+import com.smtrsolutions.test.activities.baseActivities.BaseActivity;
 
 /**
  * Created by Edwin alvarado on 9/20/17.

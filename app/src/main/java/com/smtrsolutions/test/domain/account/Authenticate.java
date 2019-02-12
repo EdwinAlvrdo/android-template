@@ -1,4 +1,4 @@
-package com.berlinendeavours.iter.domain.account;
+package com.smtrsolutions.test.domain.account;
 
 
 /**

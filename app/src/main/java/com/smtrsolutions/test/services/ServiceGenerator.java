@@ -1,6 +1,6 @@
-package com.berlinendeavours.iter.services;
+package com.smtrsolutions.test.services;
 
-import com.berlinendeavours.iter.interceptor.HttpInterceptor;
+import com.smtrsolutions.test.interceptor.HttpInterceptor;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -27,7 +27,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ServiceGenerator {
 
     //Test
-    private static final String API_BASE_URL = "http://54.153.111.182:3000";
+    private static final String API_BASE_URL = "https://api.myjson.com/";
 
     // Interceptor for logging
     private  static final HttpLoggingInterceptor logginInterceptor = new HttpLoggingInterceptor()
@@ -46,15 +46,15 @@ public class ServiceGenerator {
             .client(httpClient.build())
             .build();
 
-    private static final AuthenticateService ACCOUNT_SERVICE =  retrofit.create(AuthenticateService.class);
+    private static final ApiService API_SERVICE =  retrofit.create(ApiService.class);
 
     public ServiceGenerator(){}
 
     //All services need to be declare here
     public static <S> S getService(Class<S> serviceClass) {
 
-        if(serviceClass == AuthenticateService.class){
-            return (S) ACCOUNT_SERVICE;
+        if(serviceClass == ApiService.class){
+            return (S) API_SERVICE;
         }
         return null;
     }

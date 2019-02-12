@@ -1,4 +1,4 @@
-package com.berlinendeavours.iter;
+package com.smtrsolutions.test;
 
 import org.junit.Test;
 

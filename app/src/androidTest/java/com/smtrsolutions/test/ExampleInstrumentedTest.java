@@ -1,4 +1,4 @@
-package com.berlinendeavours.iter;
+package com.smtrsolutions.test;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

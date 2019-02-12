@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         return "A total of ".concat(p.getBasketSum())
                             .concat(" ").concat(p.getName())
-                            .concat("were sold, in ").concat(p.getBasketStringCount())
+                            .concat(" were sold, in ").concat(p.getBasketStringCount())
                             .concat(" baskets. \n\n");
 
     }

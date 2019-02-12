@@ -22,7 +22,7 @@ public interface ApiService {
     String BASE_URL = "bins/";
 
     @Headers("Accept: application/json")
-    @GET(BASE_URL+"gy28m") // Change this key for other test
+    @GET(BASE_URL+"15iu3a") // Change this key for other test "gy28m" or create a new one
     public Call<ArrayList<ResponseProducts>> getStoreProducts();
 
 

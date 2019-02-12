@@ -106,39 +106,6 @@ public class Util {
         saveInSharedPreferences(TAG_TOKEN, token);
     }
 
-    /*public static void saveMaxAuthority(UserProfile.Role role) {
-        saveInSharedPreferences(TAG_MAX_ROL, role.toString());
-    }
-
-    public static void saveUser(UserProfile user) {
-        saveInSharedPreferences(TAG_USERNAME, user.getUsername());
-        saveInSharedPreferences(TAG_FIRSTNAME, user.getFirstName());
-        saveInSharedPreferences(TAG_LASTNAME, user.getLastName());
-        saveInSharedPreferences(TAG_EMAIL, user.getEmail());
-        //saveInSharedPreferences(TAG_MAX_ROL, user.getMaxAuthority());
-
-    }
-
-    public static String getUser() {
-        return getFromSharedPreferences(TAG_USERNAME);
-    }
-
-    public static String getFirstName() {
-        return getFromSharedPreferences(TAG_FIRSTNAME);
-    }
-
-    public static String getLastName() {
-        return getFromSharedPreferences(TAG_LASTNAME);
-    }
-
-    public static String getEmail() {
-        return getFromSharedPreferences(TAG_EMAIL);
-    }
-
-    public static UserProfile.Role getMaxAuthority() {
-        return UserProfile.Role.valueOf(getFromSharedPreferences(TAG_MAX_ROL));
-    }*/
-
     public static void showMessage(String message) {
         Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
     }
@@ -223,22 +190,22 @@ public class Util {
     public static void sendEmail(Exception e, String module) {
         Log.i("Send email", "");
 
-        String[] TO = {"support@iter.com"};
-        String[] CC = {"edwin@iterapp.co;pedro@iterapp.co;hugo@iterapp.co;rivera@iterapp.co"};
+        String[] TO = {"support@app.com"};
+        String[] CC = {"edwin@app.com"};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
         emailIntent.setType("text/plain");
 
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
         emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "ITER: Report BUG");
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "App: Report BUG");
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Activity: "+ getActivity().getClass().getSimpleName() + "\n\n" +
                 "Excepcion: "+ e.toString() + "\n" +
                 "Excepcion message: "+ e.getMessage() + " :: in "+  "\n\n" + module +  "\n\n" +
                 "Exception cause: " + e.getCause() + "\n\n" +
                 "Thanks for your feedback!! :) \n"+
                 "Regards, \n"+
-                "ITER Developer Team.");
+                "App Developer Team.");
 
         try {
             getActivity().startActivity(Intent.createChooser(emailIntent, "Sending mail..."));
